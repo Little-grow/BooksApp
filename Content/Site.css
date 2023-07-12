@@ -33,3 +33,7 @@ textarea {
 #toast-container {
     margin-top: 50px;
 }
+
+.Title {
+    font-weight: bold;
+}

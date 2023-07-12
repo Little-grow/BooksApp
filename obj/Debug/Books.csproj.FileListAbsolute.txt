@@ -85,3 +85,12 @@ D:\Track-Preperation\Books\obj\Debug\Books.Migrations._1.resources
 D:\Track-Preperation\Books\obj\Debug\Books.csproj.GenerateResource.cache
 D:\Track-Preperation\Books\obj\Debug\Books.Migrations.InitialCreate.resources
 D:\Track-Preperation\Books\obj\Debug\Books.Migrations._2ndUpdate.resources
+D:\Track-Preperation\Books\bin\Toast.exe
+D:\Track-Preperation\Books\bin\Toaster.dll
+D:\Track-Preperation\Books\bin\ToolBelt.dll
+D:\Track-Preperation\Books\bin\System.Net.Http.Formatting.dll
+D:\Track-Preperation\Books\bin\System.Web.Http.dll
+D:\Track-Preperation\Books\bin\System.Web.Http.WebHost.dll
+D:\Track-Preperation\Books\bin\System.Net.Http.Formatting.xml
+D:\Track-Preperation\Books\bin\System.Web.Http.xml
+D:\Track-Preperation\Books\bin\System.Web.Http.WebHost.xml
