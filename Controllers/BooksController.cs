@@ -100,5 +100,19 @@ namespace Books.Controllers
 
 			return View("BookForm", viewModel);
 		}
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            var book = _context.Books.Find(id);
+            if (book is null)
+                return HttpNotFound();
+
+            _context.Books.Remove(book);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

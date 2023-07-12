@@ -1,6 +1,6 @@
-﻿@model IEnumerable<Books.Models.Book>   
-     
-@{ 
+﻿@model IEnumerable<Books.Models.Book>
+
+@{
     ViewBag.Title = "Index";
 }
 
@@ -9,54 +9,53 @@
 <hr />
 
 <a href="@Url.Action("Create")" class="btn btn-primary">
-    <i class="icofont-plus-circle"></i> add new 
+    <i class="icofont-plus-circle"></i> add new
 </a>
 
-@if (Model.Any())
+@if (!Model.Any())
 {
-<table class="table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Category</th>
-            <th>Description</th>
-            <th>Added On</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var book in Model)
-        {
-            <tr> 
-                <td>@Html.ActionLink(book.Title, "Details", "Books",new {id = book.Id}, null)</td>
-                <td>@book.Author</td>
-                <td>@book.Category.Name</td>
-                <td>@book.Description</td>
-                <td>@book.AddedOn</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Books", new { id = book.Id })" class="btn btn-primary"> 
-                        <i class="icofont-ui-edit"></i> Edit 
-                    </a>
+    <div class="alert alert-warning my-2">
 
-                    <a href="@Url.Action("Delete", "Books", new {id = book.Id})" class="btn btn-danger js-delete">
-                        <i class="icofont-ui-delete"></i> Delete
-                    </a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        No books added yet!
+    </div>
 }
 else
 {
-<div class="alert alert-warning my-2">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Added On</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(book.Title, "Details", "Books", new { id = book.Id }, null)</td>
+                    <td>@book.Author</td>
+                    <td>@book.Category.Name</td>
+                    <td>@book.Description</td>
+                    <td>@book.AddedOn</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Books", new { id = book.Id })" class="btn btn-primary">
+                            <i class="icofont-ui-edit"></i> Edit
+                        </a>
 
-    No books added yet!
-</div>
+                        <a href="@Url.Action("Delete", "Books", new {id = book.Id})" class="btn btn-danger js-delete">
+                            <i class="icofont-ui-delete"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
-
-@section Scripts 
+@section Scripts
 {
     <script>
         $(document).ready(function () {
@@ -67,4 +66,4 @@ else
 
 
 
- 
+
