@@ -39,7 +39,7 @@
                         <i class="icofont-ui-edit"></i> Edit 
                     </a>
 
-                    <a href="@Url.Action("Delete", "Books", new {id = book.Id})" class="btn btn-danger">
+                    <a href="@Url.Action("Delete", "Books", new {id = book.Id})" class="btn btn-danger js-delete">
                         <i class="icofont-ui-delete"></i> Delete
                     </a>
                 </td>
@@ -55,6 +55,16 @@ else
     No books added yet!
 </div>
 }
+
+@section Scripts 
+{
+    <script>
+        $(document).ready(function () {
+            toaster.error("Test");
+        });
+    </script>
+}
+
 
 
  
